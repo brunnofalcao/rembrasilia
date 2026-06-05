@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REM BSB 3ª Edição — Desafio de Empoderamento Matrimonial | 31 Jul e 1 Ago</title>
+<meta name="description" content="48 horas que vão transformar o seu casamento. 3ª edição do REM Brasília. Ferramentas práticas, propósito e Deus no centro. Vagas limitadas.">
+<meta property="og:title" content="REM BSB 3ª Edição — 2 dias que transformarão seu casamento">
+<meta property="og:description" content="Não é uma palestra. É uma experiência de 48h para reacender, reconstruir e blindar o seu casamento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#4DBFD9;
+  --teal-deep:#2C8FA8;
+  --red:#D94E2E;
+  --red-deep:#B83A1E;
+  --slate:#1F3A42;
+  --slate-deep:#152B31;
+  --slate-darker:#0E1F24;
+  --cream:#EDE4D6;
+  --cream-soft:#F4EEE4;
+  --ink:#15252B;
+  --white:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Archivo',sans-serif;
+  background:var(--slate-deep);
+  color:var(--cream-soft);
+  overflow-x:hidden;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;line-height:.92;text-transform:uppercase;}
+.narrow{font-family:'Archivo Narrow',sans-serif;}
+img{max-width:100%;display:block;}
+section{position:relative;}
+
+/* ===== TEXTURE / GRAIN ===== */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== STICKY CTA ===== */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,rgba(14,31,36,0) 0%,var(--slate-darker) 38%);
+  display:flex;justify-content:center;
+  transform:translateY(120%);transition:transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.sticky-cta.show{transform:translateY(0);}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Archivo',sans-serif;font-weight:900;font-size:1.05rem;letter-spacing:.02em;
+  text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;
+  background:var(--red);color:#fff;padding:18px 28px;border-radius:14px;
+  box-shadow:0 8px 0 var(--red-deep),0 14px 30px rgba(217,78,46,.4);
+  transition:transform .12s ease,box-shadow .12s ease;width:100%;max-width:520px;text-align:center;
+}
+.btn:active{transform:translateY(5px);box-shadow:0 3px 0 var(--red-deep),0 8px 18px rgba(217,78,46,.4);}
+.btn .pulse{width:9px;height:9px;background:#fff;border-radius:50%;animation:pulse 1.4s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7);}70%{box-shadow:0 0 0 10px rgba(255,255,255,0);}100%{box-shadow:0 0 0 0 rgba(255,255,255,0);}}
+.btn-ghost{
+  background:transparent;color:var(--teal);border:2px solid var(--teal);
+  box-shadow:none;font-size:.95rem;padding:15px 24px;
+}
+.btn-ghost:active{transform:scale(.97);box-shadow:none;}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;
+  padding:54px 22px 40px;position:relative;z-index:2;
+  background:
+    radial-gradient(120% 80% at 80% 0%,rgba(77,191,217,.22) 0%,transparent 55%),
+    radial-gradient(100% 70% at 10% 100%,rgba(217,78,46,.18) 0%,transparent 50%),
+    linear-gradient(165deg,var(--slate) 0%,var(--slate-deep) 60%,var(--slate-darker) 100%);
+}
+.hero-skyline{
+  position:absolute;left:0;right:0;top:0;height:200px;opacity:.16;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='80' fill='none' stroke='%234DBFD9' stroke-width='1.4'%3E%3Cpath d='M0 80 L40 80 L40 50 L55 50 L55 80 L90 80 L90 30 Q100 10 110 30 L110 80 L150 80 L150 45 L165 38 L180 45 L180 80 L230 80 L230 20 L236 20 L236 80 L260 80 L260 55 Q280 35 300 55 L300 80 L340 80 L345 25 L350 80 L400 80'/%3E%3C/svg%3E") repeat-x bottom;
+  background-size:auto 100%;
+}
+.hero-top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:3;}
+.brand-tag{font-family:'Archivo Narrow';font-weight:700;letter-spacing:.18em;font-size:.7rem;color:var(--teal);text-transform:uppercase;}
+.edition-pill{
+  font-family:'Anton';font-size:.78rem;letter-spacing:.05em;
+  background:var(--teal);color:var(--slate-darker);padding:5px 12px;border-radius:6px;
+}
+.hero-mid{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;justify-content:center;padding:30px 0;}
+.hero-kicker{
+  font-family:'Archivo Narrow';font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+  font-size:.82rem;color:var(--cream);opacity:.85;margin-bottom:14px;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.hero-kicker::before{content:"";width:28px;height:2px;background:var(--red);}
+.hero h1{
+  font-size:clamp(3.4rem,17vw,6rem);color:#fff;
+  text-shadow:0 4px 0 rgba(0,0,0,.15);
+}
+.hero h1 .red{color:var(--red);display:block;}
+.hero h1 .teal{color:var(--teal);}
+.hero-sub{
+  font-size:1.12rem;font-weight:500;margin-top:20px;max-width:30ch;color:var(--cream-soft);
+}
+.hero-sub strong{color:var(--teal);font-weight:800;}
+.hero-meta{
+  display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;
+}
+.meta-chip{
+  background:rgba(77,191,217,.12);border:1px solid rgba(77,191,217,.3);
+  border-radius:10px;padding:10px 14px;font-size:.82rem;font-weight:600;
+  display:flex;flex-direction:column;gap:2px;
+}
+.meta-chip b{font-family:'Anton';font-size:1.05rem;color:#fff;letter-spacing:.02em;}
+.meta-chip span{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;color:var(--teal);}
+.hero-cta{position:relative;z-index:3;margin-top:30px;}
+.hero-cta .micro{text-align:center;font-size:.74rem;color:var(--cream);opacity:.7;margin-top:12px;letter-spacing:.03em;}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);}
+.reveal.in{opacity:1;transform:none;}
+.d1{transition-delay:.05s}.d2{transition-delay:.15s}.d3{transition-delay:.25s}.d4{transition-delay:.35s}.d5{transition-delay:.45s}
+
+/* ===== MARQUEE ===== */
+.marquee{
+  background:var(--red);color:#fff;padding:11px 0;overflow:hidden;white-space:nowrap;
+  border-top:3px solid var(--slate-darker);border-bottom:3px solid var(--slate-darker);position:relative;z-index:2;
+}
+.marquee-track{display:inline-block;animation:scroll 22s linear infinite;font-family:'Anton';font-size:1rem;letter-spacing:.06em;}
+.marquee-track span{margin:0 18px;}
+.marquee-track span::after{content:"✦";margin-left:36px;color:var(--teal);}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== SECTIONS ===== */
+.wrap{padding:64px 22px;position:relative;z-index:2;}
+.eyebrow{
+  font-family:'Archivo Narrow';font-weight:700;text-transform:uppercase;letter-spacing:.18em;
+  font-size:.78rem;color:var(--red);margin-bottom:14px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red);}
+.eyebrow.teal{color:var(--teal);}
+.eyebrow.teal::before{background:var(--teal);}
+h2.sec{font-size:clamp(2.1rem,9vw,3.1rem);color:#fff;margin-bottom:18px;}
+h2.sec .accent{color:var(--teal);}
+h2.sec .accent-r{color:var(--red);}
+.lead{font-size:1.05rem;color:var(--cream);opacity:.92;max-width:54ch;}
+
+/* DOR */
+.pain{background:var(--slate-darker);}
+.pain-grid{display:flex;flex-direction:column;gap:14px;margin-top:30px;}
+.pain-card{
+  background:linear-gradient(135deg,rgba(31,58,66,.9),rgba(21,43,49,.9));
+  border-left:4px solid var(--red);border-radius:0 14px 14px 0;padding:20px 20px 20px 22px;
+}
+.pain-card p{font-size:1.02rem;font-weight:500;color:var(--cream-soft);}
+.pain-card .q{font-family:'Anton';font-size:.85rem;color:var(--red);letter-spacing:.05em;margin-bottom:7px;text-transform:uppercase;}
+.pain-bridge{
+  margin-top:34px;padding:26px;border-radius:16px;text-align:center;
+  background:linear-gradient(135deg,var(--teal-deep),var(--teal));color:var(--slate-darker);
+}
+.pain-bridge p{font-family:'Archivo';font-weight:700;font-size:1.15rem;line-height:1.4;}
+.pain-bridge .verse{font-family:'Archivo Narrow';font-style:italic;font-weight:500;font-size:.9rem;opacity:.85;margin-top:12px;}
+
+/* O QUE É */
+.what{background:var(--cream);color:var(--ink);}
+.what .eyebrow{color:var(--red-deep);}
+.what h2.sec{color:var(--slate-deep);}
+.what h2.sec .accent{color:var(--teal-deep);}
+.what .lead{color:#3a4d54;opacity:1;}
+.what-badge{width:88px;margin:0 auto 8px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.2));}
+.transform-row{display:flex;align-items:stretch;gap:12px;margin-top:34px;}
+.t-col{flex:1;border-radius:14px;padding:20px 16px;text-align:center;}
+.t-before{background:rgba(31,58,66,.08);border:1px dashed rgba(31,58,66,.3);}
+.t-after{background:linear-gradient(135deg,var(--slate-deep),var(--slate));color:#fff;}
+.t-col .lbl{font-family:'Archivo Narrow';font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;margin-bottom:12px;}
+.t-before .lbl{color:var(--red-deep);}
+.t-after .lbl{color:var(--teal);}
+.t-col ul{list-style:none;text-align:left;display:flex;flex-direction:column;gap:9px;}
+.t-col li{font-size:.9rem;font-weight:500;padding-left:22px;position:relative;line-height:1.35;}
+.t-before li::before{content:"–";position:absolute;left:4px;color:var(--red-deep);font-weight:900;}
+.t-after li::before{content:"✓";position:absolute;left:2px;color:var(--teal);font-weight:900;}
+.t-arrow{align-self:center;font-family:'Anton';color:var(--red);font-size:1.6rem;}
+
+/* TEMAS */
+.themes{background:var(--slate-deep);}
+.themes-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px;}
+.theme-card{
+  background:linear-gradient(160deg,rgba(77,191,217,.1),rgba(21,43,49,.4));
+  border:1px solid rgba(77,191,217,.18);border-radius:16px;padding:22px 16px;
+}
+.theme-card .ic{font-size:1.8rem;margin-bottom:10px;display:block;}
+.theme-card h3{font-family:'Anton';font-size:1.1rem;color:#fff;letter-spacing:.02em;margin-bottom:6px;}
+.theme-card p{font-size:.82rem;color:var(--cream);opacity:.8;line-height:1.4;}
+.themes-note{text-align:center;margin-top:24px;font-family:'Anton';font-size:1.1rem;color:var(--teal);letter-spacing:.03em;}
+
+/* INCLUI */
+.incl{background:var(--cream-soft);color:var(--ink);}
+.incl .eyebrow{color:var(--red-deep);}
+.incl h2.sec{color:var(--slate-deep);}
+.incl h2.sec .accent-r{color:var(--red);}
+.incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;}
+.incl-item{background:#fff;border-radius:14px;padding:18px 16px;box-shadow:0 4px 14px rgba(31,58,66,.07);}
+.incl-item .ic{display:inline-flex;width:40px;height:40px;border-radius:10px;background:var(--red);color:#fff;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:10px;}
+.incl-item h3{font-family:'Archivo';font-weight:800;font-size:.92rem;color:var(--slate-deep);text-transform:none;letter-spacing:0;line-height:1.25;}
+.incl-item p{font-size:.78rem;color:#5a6c72;margin-top:3px;}
+
+/* PROVA SOCIAL */
+.proof{background:var(--slate-darker);}
+.stats{display:flex;gap:10px;margin:28px 0 34px;}
+.stat{flex:1;text-align:center;background:rgba(77,191,217,.08);border-radius:14px;padding:20px 8px;border:1px solid rgba(77,191,217,.16);}
+.stat b{font-family:'Anton';font-size:2.1rem;color:var(--teal);display:block;line-height:1;}
+.stat span{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;color:var(--cream);opacity:.8;margin-top:8px;display:block;}
+.testi{display:flex;flex-direction:column;gap:14px;}
+.testi-card{background:linear-gradient(135deg,rgba(31,58,66,.7),rgba(21,43,49,.7));border-radius:16px;padding:22px;border-top:3px solid var(--teal);}
+.testi-card .stars{color:var(--red);letter-spacing:3px;font-size:.9rem;margin-bottom:10px;}
+.testi-card p{font-size:.98rem;font-style:italic;color:var(--cream-soft);line-height:1.5;}
+.testi-card .who{margin-top:14px;font-family:'Archivo';font-weight:800;font-size:.85rem;color:var(--teal);font-style:normal;}
+.ph{background:rgba(217,78,46,.14);border:1px dashed var(--red);color:#ffb9a5;padding:2px 6px;border-radius:5px;font-family:'Archivo Narrow';font-weight:700;font-size:.85em;}
+
+/* OFERTA */
+.offer{background:linear-gradient(165deg,var(--red-deep),var(--red));color:#fff;text-align:center;}
+.offer h2.sec{color:#fff;}
+.price-box{background:rgba(0,0,0,.18);border-radius:20px;padding:30px 22px;margin-top:26px;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.15);}
+.lote-tag{display:inline-block;background:var(--teal);color:var(--slate-darker);font-family:'Anton';font-size:.78rem;letter-spacing:.05em;padding:6px 14px;border-radius:7px;margin-bottom:16px;}
+.price-old{font-family:'Archivo Narrow';text-decoration:line-through;opacity:.7;font-size:1rem;}
+.price-now{font-family:'Anton';font-size:3.4rem;line-height:1;margin:6px 0;}
+.price-now small{font-size:1.1rem;opacity:.85;}
+.price-per{font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;opacity:.9;}
+.price-install{margin-top:14px;font-weight:600;font-size:.95rem;}
+.scarcity{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:'Archivo';font-weight:700;font-size:.9rem;}
+.scarcity .dot{width:9px;height:9px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite;}
+.bar{height:9px;background:rgba(0,0,0,.25);border-radius:20px;margin-top:12px;overflow:hidden;}
+.bar i{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--teal),#fff);border-radius:20px;}
+.bar-label{font-family:'Archivo Narrow';font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;margin-top:7px;opacity:.85;}
+.guarantee{margin-top:30px;display:flex;gap:12px;align-items:flex-start;text-align:left;background:rgba(255,255,255,.1);border-radius:14px;padding:18px;}
+.guarantee .seal{font-size:1.8rem;}
+.guarantee p{font-size:.85rem;line-height:1.4;}
+.guarantee b{display:block;font-family:'Anton';font-size:.95rem;letter-spacing:.02em;margin-bottom:4px;}
+
+/* FAQ */
+.faq{background:var(--slate-deep);}
+.faq-item{border-bottom:1px solid rgba(237,228,214,.12);}
+.faq-q{width:100%;background:none;border:none;color:#fff;text-align:left;padding:20px 36px 20px 0;font-family:'Archivo';font-weight:700;font-size:1rem;cursor:pointer;position:relative;line-height:1.35;}
+.faq-q::after{content:"+";position:absolute;right:4px;top:18px;font-family:'Anton';font-size:1.5rem;color:var(--teal);transition:transform .3s;}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-a p{padding:0 0 20px;color:var(--cream);opacity:.85;font-size:.92rem;line-height:1.55;}
+
+/* CLOSING */
+.closing{background:linear-gradient(165deg,var(--slate-deep),var(--slate-darker));text-align:center;padding:80px 22px 120px;}
+.closing h2{font-size:clamp(2.4rem,11vw,3.6rem);color:#fff;}
+.closing h2 .teal{color:var(--teal);}
+.closing p{margin:20px auto 0;max-width:34ch;color:var(--cream);font-size:1.05rem;}
+.closing .verse{font-family:'Archivo Narrow';font-style:italic;color:var(--teal);margin-top:22px;font-size:.95rem;}
+.closing .btn{margin-top:32px;display:inline-flex;width:auto;}
+
+footer{background:var(--slate-darker);text-align:center;padding:30px 22px 40px;font-size:.76rem;color:rgba(237,228,214,.5);}
+footer .logo{font-family:'Anton';color:var(--teal);font-size:1.4rem;letter-spacing:.05em;}
+
+@media(min-width:680px){
+  .wrap{padding:84px 40px;max-width:760px;margin:0 auto;}
+  .hero{padding:64px 40px 48px;}
+  .themes-grid{grid-template-columns:repeat(4,1fr);}
+  .incl-grid{grid-template-columns:repeat(3,1fr);}
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;}
+  .hero-mid{max-width:760px;margin:0 auto;width:100%;}
+  .hero-top,.hero-cta{max-width:760px;margin-left:auto;margin-right:auto;width:100%;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-skyline"></div>
+  <div class="hero-top reveal d1 in">
+    <span class="brand-tag">Desafio de Empoderamento Matrimonial</span>
+    <span class="edition-pill">3ª EDIÇÃO</span>
+  </div>
+
+  <div class="hero-mid">
+    <span class="hero-kicker reveal d2">Brasília · 2026</span>
+    <h1 class="reveal d2">
+      <span class="teal">REM</span>
+      <span class="red">BSB</span>
+    </h1>
+    <p class="hero-sub reveal d3">2 dias de experiência que vão <strong>transformar o seu casamento</strong> — com Deus no centro, ferramentas na mão.</p>
+
+    <div class="hero-meta reveal d4">
+      <div class="meta-chip"><span>Data</span><b>31 Jul · 1 Ago</b></div>
+      <div class="meta-chip"><span>Duração</span><b>48 horas</b></div>
+      <div class="meta-chip"><span>Local</span><b>Brasília–DF</b></div>
+    </div>
+  </div>
+
+  <div class="hero-cta reveal d5">
+    <a href="#inscricao" class="btn"><span class="pulse"></span>QUERO TRANSFORMAR MEU CASAMENTO</a>
+    <p class="micro">Vagas limitadas · 1ª e 2ª edições esgotadas</p>
+  </div>
+</header>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Comunicação que cura</span><span>Conflitos que aproximam</span><span>Intimidade restaurada</span><span>Finanças em paz</span><span>Propósito a dois</span><span>Comunicação que cura</span><span>Conflitos que aproximam</span><span>Intimidade restaurada</span><span>Finanças em paz</span><span>Propósito a dois</span>
+  </div>
+</div>
+
+<!-- ===== DOR ===== -->
+<section class="pain">
+  <div class="wrap">
+    <span class="eyebrow reveal">A verdade que ninguém fala</span>
+    <h2 class="sec reveal">Casamento bom também <span class="accent">precisa de cuidado.</span></h2>
+    <p class="lead reveal">Você não precisa estar em crise para querer mais. Às vezes o amor continua — mas a conexão esfriou no automático da rotina. Reconhece alguma destas?</p>
+
+    <div class="pain-grid">
+      <div class="pain-card reveal d1">
+        <div class="q">A conversa sumiu</div>
+        <p>Vocês falam sobre contas, filhos e agenda — mas há quanto tempo não conversam sobre vocês dois?</p>
+      </div>
+      <div class="pain-card reveal d2">
+        <div class="q">A rotina engoliu o casal</div>
+        <p>Trabalho, casa, telas. No fim do dia sobra cansaço, e o "nós" virou coadjuvante da própria história.</p>
+      </div>
+      <div class="pain-card reveal d3">
+        <div class="q">As brigas se repetem</div>
+        <p>Sempre o mesmo assunto, sempre sem solução. Falta ferramenta, não falta amor.</p>
+      </div>
+      <div class="pain-card reveal d4">
+        <div class="q">Deus saiu do centro</div>
+        <p>No corre do dia a dia, o casal que orava junto foi adiando. E sem o terceiro cordão, tudo pesa mais.</p>
+      </div>
+    </div>
+
+    <div class="pain-bridge reveal">
+      <p>O REM não vem consertar o que está quebrado.<br>Vem reacender o que sempre foi forte.</p>
+      <p class="verse">"O cordão de três dobras não se rebenta com facilidade." — Eclesiastes 4:12</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O QUE É ===== -->
+<section class="what">
+  <div class="wrap">
+    <svg class="what-badge" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 8 Q10 4 14 4 L42 4 Q50 14 58 4 L86 4 Q90 4 90 8 L90 62 Q90 88 50 106 Q10 88 10 62 Z" fill="#4DBFD9"/>
+      <path d="M22 78 L40 50 L50 62 L62 42 L78 78 Z" fill="#D94E2E"/>
+      <path d="M40 50 L48 60 L56 48 L62 42 L52 50 L46 54 Z" fill="#fff"/>
+      <path d="M22 78 Q50 70 78 78" fill="none" stroke="#fff" stroke-width="2.5"/>
+    </svg>
+    <span class="eyebrow reveal" style="justify-content:center">O que é o REM</span>
+    <h2 class="sec reveal" style="text-align:center">Não é uma palestra.<br>É uma <span class="accent">experiência.</span></h2>
+    <p class="lead reveal" style="text-align:center;margin:0 auto">Um Reto de Empoderamento Matrimonial de 48 horas, onde vocês aprendem ferramentas práticas para aplicar no dia a dia — através do acompanhamento espiritual e profissional, vivido na pele, não anotado no caderno.</p>
+
+    <div class="transform-row reveal">
+      <div class="t-col t-before">
+        <div class="lbl">Antes do REM</div>
+        <ul>
+          <li>Conversas no automático</li>
+          <li>Brigas sem desfecho</li>
+          <li>Conexão em segundo plano</li>
+          <li>Fé do casal adiada</li>
+        </ul>
+      </div>
+      <div class="t-arrow">→</div>
+      <div class="t-col t-after">
+        <div class="lbl">Depois do REM</div>
+        <ul>
+          <li>Diálogo que aproxima</li>
+          <li>Ferramentas pra resolver</li>
+          <li>Intimidade reacesa</li>
+          <li>Deus de volta ao centro</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEMAS ===== -->
+<section class="themes">
+  <div class="wrap">
+    <span class="eyebrow teal reveal">O que vocês vão viver</span>
+    <h2 class="sec reveal">4 pilares de um casamento <span class="accent">inquebrável.</span></h2>
+    <div class="themes-grid">
+      <div class="theme-card reveal d1"><span class="ic">🗣️</span><h3>Comunicação</h3><p>Falar de um jeito que o outro consiga ouvir. E ouvir de um jeito que o outro queira falar.</p></div>
+      <div class="theme-card reveal d2"><span class="ic">🤝</span><h3>Conflitos</h3><p>Transformar a discussão que separa na conversa que aproxima.</p></div>
+      <div class="theme-card reveal d3"><span class="ic">❤️‍🔥</span><h3>Intimidade</h3><p>Reacender a conexão e a sexualidade dentro do propósito do casamento.</p></div>
+      <div class="theme-card reveal d4"><span class="ic">💰</span><h3>Finanças</h3><p>Tirar o dinheiro do lugar de briga e colocá-lo no lugar de projeto comum.</p></div>
+    </div>
+    <p class="themes-note reveal">Tudo isso 100% experiencial. Nada de aula. Vocês vão sentir.</p>
+  </div>
+</section>
+
+<!-- ===== O QUE ESTÁ INCLUSO ===== -->
+<section class="incl">
+  <div class="wrap">
+    <span class="eyebrow reveal">Tudo pronto para vocês</span>
+    <h2 class="sec reveal">O que está <span class="accent-r">incluso.</span></h2>
+    <div class="incl-grid">
+      <div class="incl-item reveal d1"><span class="ic">🚌</span><h3>Transporte</h3><p>Desde o ponto de encontro</p></div>
+      <div class="incl-item reveal d1"><span class="ic">🍽️</span><h3>Refeições</h3><p>Durante os dois dias</p></div>
+      <div class="incl-item reveal d2"><span class="ic">📓</span><h3>Material</h3><p>Caderno + conteúdo exclusivo</p></div>
+      <div class="incl-item reveal d2"><span class="ic">👕</span><h3>Kit REM</h3><p>2 bonés e 2 camisetas</p></div>
+      <div class="incl-item reveal d3"><span class="ic">🏔️</span><h3>Trilhas guiadas</h3><p>Atividades ao ar livre com profissionais</p></div>
+      <div class="incl-item reveal d3"><span class="ic">⏱️</span><h3>30h de treino</h3><p>Educadores e psicólogos</p></div>
+      <div class="incl-item reveal d4"><span class="ic">📋</span><h3>Relatório do casal</h3><p>Comportamental, personalizado</p></div>
+      <div class="incl-item reveal d4"><span class="ic">🙏</span><h3>Acompanhamento</h3><p>Espiritual e profissional</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROVA SOCIAL ===== -->
+<section class="proof">
+  <div class="wrap">
+    <span class="eyebrow teal reveal">Quem viveu, conta</span>
+    <h2 class="sec reveal">Duas edições. <span class="accent">Centenas de casamentos.</span></h2>
+
+    <div class="stats reveal">
+      <div class="stat"><b><span class="ph">+200</span></b><span>casais transformados</span></div>
+      <div class="stat"><b><span class="ph">2</span></b><span>edições esgotadas</span></div>
+      <div class="stat"><b><span class="ph">4,9</span></b><span>nota dos casais</span></div>
+    </div>
+
+    <div class="testi">
+      <div class="testi-card reveal d1">
+        <div class="stars">★★★★★</div>
+        <p>"Achei que a gente estava bem. Saí do REM percebendo que a gente podia estar MUITO melhor. Foi o melhor investimento que já fizemos no nosso casamento."</p>
+        <div class="who">— <span class="ph">Nome do casal · Edição 1</span></div>
+      </div>
+      <div class="testi-card reveal d2">
+        <div class="stars">★★★★★</div>
+        <p>"48 horas que valeram por anos de terapia. Voltamos pra casa conversando de um jeito que a gente tinha esquecido como era."</p>
+        <div class="who">— <span class="ph">Nome do casal · Edição 2</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFERTA ===== -->
+<section class="offer" id="inscricao">
+  <div class="wrap">
+    <span class="eyebrow teal reveal" style="justify-content:center;color:#fff">Garanta a sua vaga</span>
+    <h2 class="sec reveal">Quanto vale 48h que mudam o resto da vida a dois?</h2>
+
+    <div class="price-box reveal">
+      <span class="lote-tag">LOTE ATUAL · VAGAS LIMITADAS</span>
+      <div class="price-install" style="margin-top:4px;margin-bottom:0">12x de</div>
+      <div class="price-now"><small>R$</small> 345<small style="font-size:.5em">,80</small></div>
+      <div class="price-per">no cartão · por casal · experiência completa</div>
+      <div class="price-install">ou R$ 3.297,00 à vista</div>
+
+      <div class="scarcity"><span class="dot"></span>Últimas vagas do lote atual</div>
+      <div class="bar"><i></i></div>
+      <div class="bar-label">Menos de <b>R$ 12 por dia</b> durante um ano — pelo casamento que vocês querem ter pra sempre.</div>
+    </div>
+
+    <div class="guarantee reveal">
+      <div class="seal">🛡️</div>
+      <p><b>Compromisso REM</b>O que vocês vão receber não cabe num caderno — cabe na vida. Cada casal sai com um plano concreto pra aplicar a partir de segunda-feira.</p>
+    </div>
+
+    <a href="https://ticketandgo.com.br/rem-3-rota-dos-reis?id=f001c126-bf8c-4913-b8ab-2a0ba193edbc" class="btn" style="margin-top:30px;background:var(--slate-darker);box-shadow:0 8px 0 #000,0 14px 30px rgba(0,0,0,.4)" target="_blank" rel="noopener"><span class="pulse"></span>QUERO MINHA VAGA AGORA</a>
+    <p class="micro" style="color:#fff;opacity:.8;margin-top:12px">Inscrição segura via Ticket&Go</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="wrap">
+    <span class="eyebrow teal reveal">Antes de você decidir</span>
+    <h2 class="sec reveal">Perguntas que <span class="accent">todo casal faz.</span></h2>
+
+    <div class="faq-item reveal">
+      <button class="faq-q">"Nosso casamento já é bom. Vale a pena mesmo?"</button>
+      <div class="faq-a"><p>É exatamente para quem está bem. Os melhores casamentos não são os que nunca tiveram problema — são os que nunca pararam de se cuidar. O REM leva um casamento bom para um patamar que vocês ainda não viveram.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Para quem é o REM?</button>
+      <div class="faq-a"><p>Para todo casal disposto a melhorar e a viver um próximo nível na relação. Namorados, noivos ou casados — em qualquer fase da vida conjugal.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">É terapia? É retiro religioso?</button>
+      <div class="faq-a"><p>Nenhum dos dois — é uma experiência. Tem profundidade espiritual com Deus no centro, conduzida por educadores e psicólogos, mas é prática, viva e leve. Vocês vão rir, se emocionar e voltar com ferramentas reais.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">Quanto tempo dura e o que preciso levar?</button>
+      <div class="faq-a"><p>São 48 horas dedicadas exclusivamente ao casamento de vocês. Transporte, refeições, kit e material já estão inclusos. Após a inscrição vocês recebem o Manual de Orientação com tudo que precisam levar.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">E se eu deixar para depois?</button>
+      <div class="faq-a"><p>As duas primeiras edições esgotaram. As vagas são limitadas e o preço sobe a cada lote. O melhor momento de investir no casamento nunca é "depois" — é antes da próxima crise virar a regra.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="closing">
+  <h2 class="reveal">Daqui a 5 anos,<br>que <span class="teal">casal</span> vocês vão ser?</h2>
+  <p class="reveal">Existe uma versão do seu casamento que ainda não foi vivida. Ela começa em 48 horas.</p>
+  <p class="verse reveal">"Portanto, o que Deus uniu, ninguém separe." — Mateus 19:6</p>
+  <a href="https://ticketandgo.com.br/rem-3-rota-dos-reis?id=f001c126-bf8c-4913-b8ab-2a0ba193edbc" class="btn reveal" target="_blank" rel="noopener"><span class="pulse"></span>GARANTIR NOSSA VAGA</a>
+</section>
+
+<footer>
+  <div class="logo">REM BSB</div>
+  <p style="margin-top:8px">Desafio de Empoderamento Matrimonial · 3ª Edição · Brasília 2026</p>
+  <p style="margin-top:6px">© Matrimônios REM · Todos os direitos reservados</p>
+</footer>
+
+<!-- ===== STICKY CTA ===== -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#inscricao" class="btn"><span class="pulse"></span>GARANTIR VAGA · 12x R$ 345</a>
+</div>
+
+<script>
+// Sticky CTA: aparece após sair do hero
+const sticky=document.getElementById('stickyCta');
+const hero=document.querySelector('.hero');
+const offer=document.getElementById('inscricao');
+new IntersectionObserver((e)=>{e.forEach(en=>{sticky.classList.toggle('show',!en.isIntersecting);});},{threshold:.15}).observe(hero);
+// esconde quando chega na própria oferta
+new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting)sticky.classList.remove('show');});},{threshold:.3}).observe(offer);
+
+// Reveal on scroll
+const io=new IntersectionObserver((entries)=>{entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const a=item.querySelector('.faq-a');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+</script>
+</body>
+</html>
