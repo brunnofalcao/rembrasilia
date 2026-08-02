@@ -455,9 +455,9 @@ footer .logo{font-family:'Anton';color:var(--teal);font-size:1.4rem;letter-spaci
 
 /* ===== UX/UI v4 ===== */
 .hero-logo{text-align:center;margin-bottom:20px;position:relative;z-index:3;}
-.hero-logo img{width:min(300px,66%);height:auto;filter:drop-shadow(0 8px 22px rgba(0,0,0,.35));}
+.hero-logo img{width:min(300px,66%);height:auto;margin:0 auto;filter:drop-shadow(0 8px 22px rgba(0,0,0,.35));}
 footer .logo{margin-bottom:14px;}
-footer .logo img{width:170px;height:auto;opacity:.92;}
+footer .logo img{width:170px;height:auto;margin:0 auto;opacity:.92;}
 .btn{position:relative;overflow:hidden;}
 .btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.26),transparent);transform:skewX(-18deg);animation:shine 3.8s infinite;}
 @keyframes shine{0%{left:-120%}55%{left:130%}100%{left:130%}}
@@ -473,6 +473,28 @@ footer .logo img{width:170px;height:auto;opacity:.92;}
 img{max-width:100%;}
 :focus-visible{outline:3px solid var(--teal);outline-offset:2px;}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}}
+
+/* ===== DESKTOP HERO · 2 colunas, CTA à direita ===== */
+@media(min-width:1024px){
+  .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    grid-template-areas:"logo logo" "top top" "mid cta";
+    column-gap:64px;align-items:center;
+    padding-left:max(48px,calc((100vw - 1180px)/2));
+    padding-right:max(48px,calc((100vw - 1180px)/2));}
+  .hero-logo{grid-area:logo;}
+  .hero-top{grid-area:top;max-width:none;width:auto;}
+  .hero-mid{grid-area:mid;max-width:none;margin:0;}
+  .hero-cta{grid-area:cta;max-width:none;width:auto;margin:0;
+    background:linear-gradient(180deg,rgba(77,191,217,.1),rgba(77,191,217,.04));
+    border:1px solid rgba(77,191,217,.25);border-radius:24px;
+    padding:44px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 24px 60px rgba(0,0,0,.35);}
+  .hero-cta::before{content:"30 e 31 de Outubro · Brasília";
+    font-family:'Anton',sans-serif;font-size:1.02rem;letter-spacing:.08em;
+    color:var(--teal);margin-bottom:18px;text-transform:uppercase;}
+  .hero-cta .btn{width:100%;max-width:none;}
+}
+#inscricao{scroll-margin-top:16px;}
 </style>
 </head>
 <body>
